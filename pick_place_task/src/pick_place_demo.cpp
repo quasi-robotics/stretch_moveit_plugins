@@ -1,7 +1,11 @@
 #include <geometric_shapes/solid_primitive_dims.h>
 #include <moveit/planning_scene_monitor/planning_scene_monitor.h>
 #include <moveit/robot_model_loader/robot_model_loader.h>
+#if __has_include(<tf2_eigen/tf2_eigen.hpp>)
+#include <tf2_eigen/tf2_eigen.hpp>
+#else
 #include <tf2_eigen/tf2_eigen.h>
+#endif
 
 #include <pick_place_task/pick_place_task.hpp>
 #include <rclcpp/rclcpp.hpp>
